@@ -1,0 +1,29 @@
+{
+  "name": "request-header-parser-microservice",
+  "version": "1.0.0",
+  "description": "JavaScript application that will return the IP address, language, and operating system of the client",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-register --reporter=nyan",
+    "build": "babel src -d build",
+    "prestart": "npm run build",
+    "start": "node ./build/server.js"
+  },
+  "author": "@GabrielKunkel",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-useragent": "^1.0.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.1.2"
+  }
+}
